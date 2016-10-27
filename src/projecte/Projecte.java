@@ -24,14 +24,17 @@ public class Projecte {
     double diametre=0.0;
     boolean forat=false;
     double preu=0.0;
+    int valoració=0, menu=0;
     
+    System.out.println("||||||||||||||||||||MENÚ||||||||||||||||||||");
     System.out.println("1. Afegir nova dilatació");
     System.out.println("2. Borrar dilatació ");
     System.out.println("3. Modificar dilatació");
     System.out.println("4. Mostrar dilatacions");
     System.out.println("5. Sortir del programa");
+    menu=entrada.nextInt();
     
-    
+    switch (menu)
     
     }
 }
