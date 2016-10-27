@@ -22,19 +22,53 @@ public class Projecte {
     String nom=null;
     String color=null;
     double diametre=0.0;
-    boolean forat=false;
+    boolean forat=false, omplit=false;
     double preu=0.0;
-    int valoració=0, menu=0;
+    int valoració=0, menu=5;
     
+    while(!(menu<1)) {
     System.out.println("||||||||||||||||||||MENÚ||||||||||||||||||||");
     System.out.println("1. Afegir nova dilatació");
     System.out.println("2. Borrar dilatació ");
     System.out.println("3. Modificar dilatació");
     System.out.println("4. Mostrar dilatacions");
-    System.out.println("5. Sortir del programa");
+    System.out.println("0. Sortir del programa");
     menu=entrada.nextInt();
     
-    switch (menu)
+    
+    switch (menu) {
+        case 1:
+            if(!omplit) {
+                System.out.println("Escriu el nom de la dilatació");
+                System.out.println("Escriu el color de la dilatació");
+                System.out.println("Escriu el diàmetre");
+                System.out.println("Té forat?");
+                System.out.println("Quin es el seu preu?");
+                System.out.println("Quina es la teva valoració? (Del 1 al 10)");
+                
+                
+                
+                
+                
+                
+                omplit=true;
+            } else {
+                System.out.println("Ja has introduït dades, si vols omplir-lo borral primer.");
+            }
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 0:
+            System.out.println("Fins un altra!");
+            break;
+        default:
+             System.out.println("Opció invàlida, torna a intentar-ho.");
+    }
     
     }
+}
 }
