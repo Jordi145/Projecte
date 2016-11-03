@@ -25,7 +25,7 @@ public class Projecte {
     boolean forat=false, omplit=false, mostrar=false, borrar=false;
     char mander=' ', esmostrar=' ', esborrar=' ';
     double preu=0.0;
-    int valoració=0, menu=5;
+    int valoracio=0, menu=5;
     
     while(!(menu<1)) {
     System.out.println("||||||||||||||||||||MENÚ||||||||||||||||||||");
@@ -54,7 +54,7 @@ public class Projecte {
                 System.out.println("Quin es el seu preu? (en euros)");
                 preu=entrada.skip("[\r\n]*").nextDouble();
                 System.out.println("Quina es la teva valoració? (Del 1 al 10)");
-                valoració=entrada.nextInt();
+                valoracio=entrada.nextInt();
                 omplit=true;
             } else {
                 System.out.println("Ja has introduït dades!");
@@ -77,7 +77,7 @@ public class Projecte {
                         System.out.println("Diàmetre de la dilatació: " +diametre);
                         System.out.println("Té forat la dilatació? " +forat);
                         System.out.println("Preu de la dilatació: " +preu);
-                        System.out.println("Valoració de la dilatació: " +valoració);
+                        System.out.println("Valoració de la dilatació: " +valoracio);
                      
                         System.out.println("Vols borrar les dades? (S/N)");
                          do {
@@ -90,7 +90,8 @@ public class Projecte {
                                 diametre = 0;
                                 forat = false;
                                 preu = 0;
-                                valoració = 0;
+                                valoracio = 0;
+                                omplit = false;
                                 System.out.println("Dades esborrades!");
                             } else { 
                                 System.out.println("No s'ha esborrat rés!");
@@ -108,7 +109,8 @@ public class Projecte {
                                 diametre = 0;
                                 forat = false;
                                 preu = 0;
-                                valoració = 0;
+                                valoracio = 0;
+                                omplit = false;
                                 System.out.println("Dades esborrades!");
                             } else {
                                 System.out.println("No s'ha esborrat rés!");
@@ -124,7 +126,7 @@ public class Projecte {
                 System.out.println("Diàmetre de la dilatació: " +diametre);
                 System.out.println("Té forat la dilatació? " +forat);
                 System.out.println("Preu de la dilatació: " +preu);
-                System.out.println("Valoració de la dilatació: " +valoració);
+                System.out.println("Valoració de la dilatació: " +valoracio);
             } else { 
                 System.out.println("No hi ha informació que mostrar!");
             }    
