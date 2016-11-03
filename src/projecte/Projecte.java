@@ -30,7 +30,7 @@ public class Projecte {
     while(!(menu<1)) {
     System.out.println("||||||||||||||||||||MENÚ||||||||||||||||||||");
     System.out.println("1. Afegir nova dilatació");
-    System.out.println("2. Borrar dilatació ");
+    System.out.println("2. Borrar dilatació");
     System.out.println("3. Modificar dilatació");
     System.out.println("4. Mostrar dilatacions");
     System.out.println("0. Sortir del programa");
@@ -61,26 +61,30 @@ public class Projecte {
             }
             break;
         case 2:
-            if (omplit = true)
+            if (omplit != false) {
                 System.out.println("Vols vore les dades de la dilatació? (S/N)");
                 do {
                     esmostrar = entrada.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
                 } while (esmostrar != 'S' && esmostrar != 'N');
                 mostrar = (esmostrar == 'S');
-                    if (mostrar = true)
+            } else {
+                System.out.println("No hi ha informació que borrar!");
+                break;
+            }
+                    if (mostrar != false) {
                         System.out.println("Nom de la dilatació: " +nom);
                         System.out.println("Color de la dilatació: " +color);
                         System.out.println("Diàmetre de la dilatació: " +diametre);
                         System.out.println("Té forat la dilatació? " +forat);
                         System.out.println("Preu de la dilatació: " +preu);
                         System.out.println("Valoració de la dilatació: " +valoració);
-                        
+                     
                         System.out.println("Vols borrar les dades? (S/N)");
                          do {
                             esborrar = entrada.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
                         } while (esborrar != 'S' && esborrar != 'N');
                         borrar = (esborrar == 'S');
-                            if (borrar = true) {
+                            if (borrar != false) {
                                 nom = null;
                                 color = null;
                                 diametre = 0;
@@ -88,7 +92,28 @@ public class Projecte {
                                 preu = 0;
                                 valoració = 0;
                                 System.out.println("Dades esborrades!");
-                            }
+                            } else { 
+                                System.out.println("No s'ha esborrat rés!");
+                            }    
+                            
+                    } else { 
+                        System.out.println("Vols borrar les dades? (S/N)");
+                         do {
+                            esborrar = entrada.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                        } while (esborrar != 'S' && esborrar != 'N');
+                        borrar = (esborrar == 'S');
+                            if (borrar != false) {
+                                nom = null;
+                                color = null;
+                                diametre = 0;
+                                forat = false;
+                                preu = 0;
+                                valoració = 0;
+                                System.out.println("Dades esborrades!");
+                            } else {
+                                System.out.println("No s'ha esborrat rés!");
+                            }        
+                    }           
             break;
         case 3:
             break;
