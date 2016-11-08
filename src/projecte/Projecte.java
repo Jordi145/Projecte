@@ -25,7 +25,7 @@ public class Projecte {
     boolean forat=false, omplit=false, mostrar=false, borrar=false;
     char mander=' ', esmostrar=' ', esborrar=' ';
     double preu=0.0;
-    int valoracio=0, menu=5;
+    int valoracio=0, menu=5, nemo=0;
     
     while(!(menu<1)) {
     System.out.println("||||||||||||||||||||MENÚ||||||||||||||||||||");
@@ -118,7 +118,23 @@ public class Projecte {
                     }           
             break;
         case 3:
+            System.out.println("Vols vore les dades de la dilatació? (S/N)");
+            do {
+                    esmostrar = entrada.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+                } while (esmostrar != 'S' && esmostrar != 'N');
+                mostrar = (esmostrar == 'S');
+                
+                if (mostrar != false) {
+                        System.out.println("Nom de la dilatació: " +nom);
+                        System.out.println("Color de la dilatació: " +color);
+                        System.out.println("Diàmetre de la dilatació: " +diametre);
+                        System.out.println("Té forat la dilatació? " +forat);
+                        System.out.println("Preu de la dilatació: " +preu);
+                        System.out.println("Valoració de la dilatació: " +valoracio);
+                     
+                        System.out.println("Vols modificar les dades? (S/N)");
             break;
+                }
         case 4:
             if (omplit != false) {
                 System.out.println("Nom de la dilatació: " +nom);
